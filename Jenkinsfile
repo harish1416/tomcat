@@ -1,13 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    label test
+  }
   tools {
     maven 'MAVEN_3.9.6'
     jdk 'JDK_21'
   }
-//   environment {
-    // JAVA_HOME = "${tool 'JDK_21'}"
-//    PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
-//   }
+  // environment {
+  //   JAVA_HOME = "${tool 'JDK_21'}"
+  //  PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+  // }
   stages {
     stage('Checkout') {
       steps {
