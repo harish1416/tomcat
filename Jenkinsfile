@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label test
+    label 'test'
   }
   tools {
     maven 'MAVEN_3.9.6'
