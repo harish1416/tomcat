@@ -24,7 +24,7 @@ pipeline {
     
   stage('Deploy to Tomcat') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: 'tomcat', url: 'http://ec2-3-26-19-113.ap-southeast-2.compute.amazonaws.com:8080/')], war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat', url: 'http://ec2-3-26-16-58.ap-southeast-2.compute.amazonaws.com:8080/')], war: '**/*.war'
       }
     }
   }
